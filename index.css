@@ -1,0 +1,157 @@
+html,
+body {
+    background-color: #ff8dea;
+    font-size: 62.5%;
+    line-height: 3rem;
+    margin: 0;
+    display: flex;
+    cursor: default;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+}
+
+.main {
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.butts{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+h1,
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    width: 100%;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 18px;
+    font-size: 2.8em;
+    font-size: 3.5vw;
+    color: rgba(0, 0, 0, 0.5);
+    top: 14%;
+}
+
+h2 {
+    bottom: 1vh;
+    font-size: 10px;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.35);
+}
+
+h1 span {
+    font-size: 10.6vw;
+    line-height: 1em;
+    z-index: 100;
+    text-shadow: 0.04em 0.04em 0 #fcfade;
+    display: block;
+}
+
+h1 span,
+h1 span:after {
+    font-weight: 600;
+    color: #e17171;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 0.16em;
+}
+
+h1 span:after {
+    color: rgba(0, 0, 0, 0.25);
+    text-shadow: none;
+    position: absolute;
+    left: 0.08em;
+    top: 0.08em;
+    z-index: -1;
+}
+
+span.one:after {
+    content: "Will you";
+}
+
+span.two:after {
+    content: "bee my";
+}
+
+span.three:after {
+    content: "valentine?";
+}
+
+@media screen and (min-width: 880px) {
+    h1 {
+        font-size: 2.5vw;
+    }
+
+    h1 span {
+        font-size: 6vw;
+    }
+}
+
+#falling-hearts {
+    animation: wobble 60s ease-in infinite;
+    position: fixed;
+    inset: 0 0 0 0;
+    pointer-events: none;
+}
+
+.heart {
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1000;
+    position: fixed;
+}
+
+.shadow {
+    height: 45px;
+    width: 170px;
+    border-radius: 50%;
+    background-color: #88badd;
+    animation: shadow 2s ease-in-out infinite;
+}
+
+@keyframes shadow {
+
+    0%,
+    100% {
+        width: 170px;
+    }
+
+    50% {
+        width: 180px;
+    }
+}
+
+@keyframes wobble {
+
+    0%,
+    50%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+}

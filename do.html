@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffb6f2;
+        }
+
+        .message {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff3b;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.507);
+            position: relative;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff88ff;
+            border:#ff88ff;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 400;
+        }
+
+        button:hover {
+            background-color: #b7a1ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>Thank you di thangakatti!</h1>
+        <button onclick="showAlert()">Take my heart</button>
+    </div>
+
+    <script>
+           function showAlert() {
+            alert("Already Adhu unkitta dhan iruku buju !");
+        }
+        // JavaScript to show the message at the center of the page
+        document.addEventListener("DOMContentLoaded", function() {
+            const messageDiv = document.querySelector(".message");
+            messageDiv.style.visibility = "hidden"; // Initially hide the message
+
+            // Function to show the message at the center of the page
+            function showMessage() {
+                messageDiv.style.visibility = "visible";
+            }
+
+            // Call the showMessage function after a delay
+            setTimeout(showMessage, 500); // Adjust the delay as needed
+        });
+    </script>
+</body>
+</html>
